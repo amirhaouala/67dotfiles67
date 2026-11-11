@@ -1,0 +1,3 @@
+(thankful-eyes-theme
+ :fetcher git
+ :url "https://git.andros.dev/andros/thankful-eyes-theme.el.git")

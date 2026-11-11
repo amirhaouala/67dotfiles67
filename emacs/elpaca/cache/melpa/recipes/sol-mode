@@ -1,0 +1,1 @@
+(sol-mode :fetcher github :repo "nlordell/sol-mode")

@@ -1,0 +1,9 @@
+@import "~/.config/rofi/config.rasi" 
+
+entry {
+  placeholder: " 💫 Choose Emoji";
+}
+
+element-icon {
+  size: 0;
+}

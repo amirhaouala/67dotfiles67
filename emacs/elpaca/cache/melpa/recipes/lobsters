@@ -1,0 +1,1 @@
+(lobsters :fetcher git :url "https://git.andros.dev/andros/lobsters.el.git")

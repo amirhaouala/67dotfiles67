@@ -1,0 +1,95 @@
+window {
+    width:                       57%;
+    height:                      86%;
+    background-color:            #000000CC;
+    transparency:                "real";
+    border:                      2px;
+    border-radius:               30px;
+}
+
+configuration {
+    font:                        "JetBrainsMono Nerd Font SemiBold 13";
+    modi:                        "drun,run,filebrowser";
+    show-icons:                  true;
+    display-drun:                "  apps";
+    display-run:                 "  term";
+    display-filebrowser:         "  files";
+    hover-select:                true;
+    matching:                    "fuzzy";
+    sort:                        true;
+    sorting-method:              "fzf";
+}
+
+* {
+    foreground:                  #EDE1D5;
+    text-selected:               #FFFFFF;
+    text-color:                  #EDE1D5;
+    border-color:                #404734;
+}
+
+inputbar {
+    padding:                     10px 10px 150px 10px;
+    margin:                      10px;
+    border-radius:               25px;
+    children:                    [ "entry", "dummy", "mode-switcher" ];
+    background-image:            url("~/Pictures/Wallpapers/Keyboards.jpg", width);
+}
+
+entry {
+    width:                       300px;
+    padding:                     10px;
+    border-radius:               12px;
+    background-color:            #2A282A;
+}
+
+listview {
+    columns:                     2;
+    spacing:                     10px;
+    padding:                     10px;
+    border:                      0px;
+}
+
+scrollbar {
+    handle-width:                2px;
+}
+
+button {
+    width:                       7%;
+    padding:                     12px;
+    border-radius:               12px;
+    background-color:            #2A282A;
+    cursor:                      pointer;
+}
+
+button selected {
+    background-color:            #404734;
+    text-color:                  #2A282A;
+}
+
+element {
+    padding:                     10px;
+    cursor:                      pointer;
+}
+
+element normal.normal {
+    background-color:            inherit;
+}
+
+element selected.normal {
+    background-color:            #404734;
+    text-color:                  #2A282A;
+}
+
+element alternate.normal {
+    background-color:            transparent;
+}
+
+
+element-icon {
+    size:                        36px;
+}
+
+element-text {
+    vertical-align:              0.5;
+    font:                        "JetBrainsMono Nerd Font SemiBold 11";
+}

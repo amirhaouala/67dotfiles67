@@ -1,0 +1,4 @@
+(ocodo-svg-modelines
+ :fetcher github
+ :repo "ocodo-labs/ocodo-svg-modelines"
+ :files (:defaults ("images" "images/*.base64")))

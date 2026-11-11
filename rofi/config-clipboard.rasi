@@ -1,0 +1,13 @@
+@import "~/.config/rofi/config.rasi"  
+
+entry {
+  placeholder: " 📋 Search  Clipboard ";
+}
+
+listview {
+  columns: 1;
+}
+
+element-icon {
+  size: 0;
+}

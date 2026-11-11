@@ -1,0 +1,66 @@
+{
+  // Themes
+  "workbench.colorTheme": "Tokyo City",
+  "workbench.iconTheme": "vscode-great-icons",
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "window.menuBarVisibility": "hidden",
+  // Font
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "editor.cursorStyle": "block-outline",
+  "editor.cursorBlinking": "phase",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.lineHeight": 3,
+  "editor.lineNumbers": "interval",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+  },
+  // Explorer
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  // Golang
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+  },
+  // JS /TS
+  "js.updateImportsOnFileMove.enabled": "always",
+  "ts.preferences.preferTypeOnlyAutoImports": true,
+  "ts.updateImportsOnFileMove.enabled": "always",
+  // Minimap
+  "editor.minimap.size": "fill",
+  "editor.minimap.renderCharacters": false,
+  // Git
+  "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "never",
+  // Telemetry
+  "redhat.telemetry.enabled": false,
+  // Total Typescript
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.hideBasicTips": true,
+  // file handling depending on file type
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode",
+  },
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+  },
+  "explorer.confirmPasteNative": false,
+  "editor.formatOnSave": true,
+  "kimi.yoloMode": true,
+}

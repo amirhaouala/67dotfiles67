@@ -1,0 +1,176 @@
+// Place your key bindings in this file to override the defaults
+[
+  // Commenting
+  {
+    "key": "shift+space",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly",
+  },
+  // Workbench
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.quickOpen",
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen",
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.showCommands",
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "-workbench.action.showCommands",
+  },
+  {
+    "key": "shift+alt+f1",
+    "command": "workbench.action.closeEditorsToTheLeft",
+  },
+  {
+    "key": "shift+alt+f2",
+    "command": "workbench.action.closeEditorsToTheRight",
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.trust.manage",
+  },
+  // Git Graph
+  {
+    "key": "shift+alt+g",
+    "command": "git-graph.view",
+  },
+  // Fold
+  {
+    "key": "ctrl+k ctrl+f",
+    "command": "editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "ctrl+k ctrl+0",
+    "command": "-editor.foldAll",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "alt+f",
+    "command": "editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "ctrl+k ctrl+l",
+    "command": "-editor.toggleFold",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.toggleFoldRecursively",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "ctrl+k ctrl+shift+l",
+    "command": "-editor.toggleFoldRecursively",
+    "when": "editorTextFocus && foldingEnabled",
+  },
+  {
+    "key": "shift+alt+s",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly",
+  },
+  {
+    "key": "ctrl+.",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly",
+  },
+  // Transforming to LowerCase/UpperCase
+  {
+    "key": "ctrl+shift+'",
+    "command": "editor.action.transformToLowercase",
+  },
+  {
+    "key": "ctrl+'",
+    "command": "editor.action.transformToUppercase",
+  },
+  // Toggle maximize Panel
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
+  // Control view width and height
+  {
+    "key": "ctrl+alt+down",
+    "command": "workbench.action.terminal.resizePaneDown",
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "workbench.action.terminal.resizePaneUp",
+  },
+  {
+    "key": "ctrl+alt+right",
+    "command": "workbench.action.decreaseViewWidth",
+  },
+  {
+    "key": "ctrl+alt+left",
+    "command": "workbench.action.increaseViewWidth",
+  },
+  // Save all
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveFiles",
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "git.stash",
+  },
+  {
+    "key": "ctrl+shift+q",
+    "command": "editor.action.toggleMinimap",
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "kimi.focusInput",
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-kimi.focusInput",
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl",
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl",
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-extension.vim_ctrl+c",
+    "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl",
+  },
+  {
+    "key": "ctrl+v",
+    "command": "-extension.vim_ctrl+v",
+    "when": "editorTextFocus && vim.active && vim.use<C-v> && !inDebugRepl",
+  },
+  {
+    "key": "ctrl+x",
+    "command": "-extension.vim_ctrl+x",
+    "when": "editorTextFocus && vim.active && vim.use<C-x> && !inDebugRepl",
+  },
+  {
+    "key": "ctrl+f",
+    "command": "-extension.vim_ctrl+f",
+    "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'",
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-extension.vim_ctrl+a",
+    "when": "editorTextFocus && vim.active && vim.use<C-a> && !inDebugRepl",
+  },
+]

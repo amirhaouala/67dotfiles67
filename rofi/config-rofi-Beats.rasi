@@ -1,0 +1,9 @@
+@import "~/.config/rofi/config.rasi"
+
+listview {
+  scrollbar: false;
+}
+
+element-icon {
+  size: 0;
+}

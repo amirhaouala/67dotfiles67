@@ -1,0 +1,140 @@
+## Replace some programs with better alternatives ##
+alias cat="bat"
+alias ls="eza -al --color=always --group-directories-first"
+alias tree="eza -aT --color=always --group-directories-first"
+alias svim="sudo vim"
+alias yay="paru"
+
+## Filters ##
+alias h="history | rg -i" # cmd history search
+alias s="systemctl list-unit-files | rg -i" # unit files search
+alias i="yay -Qs" # installed packages search
+alias p="ps -ef | rg -i" # processes search
+alias f="find . -name" # file name search
+alias ff="rg -n . -e" # file content search
+
+## Shortening ##
+alias tarnow="tar -acf"
+alias untar="tar -zxvf"
+alias wget="wget -c"
+alias m="make --quiet"
+
+## Configuration Files ##
+alias tconf="vim ~/.tmux.conf"
+alias aconf="vim ~/.aliases"
+alias nconf="vim ~/.config/nvim/init.vim"
+alias uconf="vim ~/.newsboat/urls"
+alias bconf="vim ~/.bashrc"
+alias zconf="vim ~/.zshrc"
+alias fconf="vim ~/.config/fish/config.fish"
+alias kconf="vim ~/.config/kitty/kitty.conf"
+alias vconf="vim ~/.vimrc"
+alias lconf="vim ~/.config/wlogout"
+alias hconf="vim ~/.config/hypr/hyprland.conf"
+alias rconf="vim ~/.config/rofi/config.rasi"
+alias wconf="vim ~/.config/waybar"
+alias sconf="vim ~/.config/swaync/config.json"
+
+## Shell History ##
+alias fhistory="vim ~/.local/share/fish/fish_history"
+alias bhistory="vim ~/.bash_history"
+alias zhistory="vim ~/.zsh_history"
+
+## Folder Shortcuts ##
+alias doc="cd ~/Documents"
+alias dow="cd ~/Downloads"
+alias sec="cd ~/Security"
+alias htb="cd ~/Security/HTB"
+alias thm="cd ~/Security/THM"
+alias pro="cd ~/Projects"
+alias wor="cd ~/Work"
+alias bui="cd ~/Builds"
+alias cod="cd ~/Code"
+
+## Hardware ##
+alias hw="hwinfo --short"
+alias info="inxi -Fxxxza"
+alias disk="lsblk --paths --tree --output uuid,name,fstype,label,mountpoint" # requires sudo
+
+## Network ##
+alias myip="echo private: && ifconfig wlp0s20f3 && echo public: && curl ifconfig.me"
+
+## VSCode ##
+alias code="codium"
+alias code_extensions_list="code --list-extensions"
+alias code_extensions_update="code --list-extensions | tr '\n' '\0' | xargs -0 -n1 codium --force --install-extension"
+
+## Git ##
+alias gl="git log --oneline"
+alias gref="git reflog"
+alias grem="git remote"
+alias gc="git commit"
+alias gd="git diff"
+
+## Programming Languages Specific ##
+# Node
+alias rmnodemodules='find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +'
+alias n18="nvm use 18"
+alias n16="nvm use 16.15"
+# C/C++
+alias crun="gcc -o main main.c && ./main"
+# Python
+alias pybox="python -m venv venv"
+alias pyenv="source venv/bin/activate.fish"
+alias pyreq="python -m pip freeze > requirements.txt"
+# Golang
+alias golocalbin="export GOBIN=$PWD/bin && export PATH=$GOBIN:$PATH"
+
+## LF ##
+alias icons="vim ~/.config/lf/icons"
+alias nav="lfcd"
+
+## Systemd ##
+alias bluetooth-on="sudo systemctl start bluetooth.service"
+alias bluetooth-off="sudo systemctl stop bluetooth.service"
+alias ssh-on="sudo systemctl start sshd.service"
+alias ssh-off="sudo systemctl stop sshd.service"
+alias docker-on="sudo systemctl start docker.service"
+alias docker-off="sudo systemctl stop docker.service"
+
+# Batter Conservation
+alias tlp-on="sudo tlp setcharge 0 1 BAT0"
+alias tlp-off="sudo tlp setcharge 0 0 BAT0"
+
+## Linux Logs ##
+alias l="rg -i /var/log -e" # logs content search. requires sudo
+alias j="journalctl -xeu"
+alias jj="journalctl --no-pager -u" # get the error messages from journalctl for a service
+
+## Distrobox ##
+alias arch="distrobox-enter arch -- sh"
+alias deb="distrobox-enter deb -- sh"
+
+## Hyprland ##
+alias monitor-disable="hyprctl keyword monitor 'eDP-1, disable'"
+
+## Containers ##
+# Cyber Security
+alias kali="podman start 'KaliLinux' && podman exec -it 'KaliLinux' bash || echo 'Running container KaliLinux from kalilinux/kali-last-release ...' && podman run --name 'KaliLinux' -it --network host -v ~/Security:/host:Z docker.io/kalilinux/kali-last-release" # kali in docker
+alias parrot="podman start 'Parrot_OS' && podman exec -it 'Parrot_OS' bash || echo 'Running container Parrot_OS from parrotsec/security ...' && podman run --name 'Parrot_OS' -it --network host -v ~/Security:/host:Z parrotsec/security" # parrot in container
+alias kali-no-bridge="podman start 'KaliLinux' && podman exec -it 'KaliLinux' bash || echo 'Running container KaliLinux from kalilinux/kali-last-release ...' && podman run --name 'KaliLinux' -it -v ~/Security:/host:Z docker.io/kalilinux/kali-last-release" # kali in docker
+alias parrot-no-bridge="podman start 'Parrot_OS' && podman exec -it 'Parrot_OS' bash || echo 'Running container Parrot_OS from parrotsec/security ...' && podman run --name 'Parrot_OS' -it -v ~/Security:/host:Z docker.io/parrotsec/security" # parrot in docker
+alias msfconsole="podman run --rm -it docker.io/parrotsec/metasploit"
+
+# Databases
+alias mysql="docker start my-mysql || docker run --name my-mysql -e MYSQL_ROOT_PASSWORD=mysecretpassword -p 3306:3306 -d mysql:latest"
+alias redis="docker start my-redis || docker run --name my-redis -p 6379:6379 -d redis"
+alias mongo="docker start my-mongo || docker run --name my-mongo -p 27017:27017 -d mongo"
+alias postgresql="docker start my-postgres || docker run --name my-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d docker.io/postgres:latest"
+alias pgadmin="docker start my-pgadmin || docker run --name my-pgadmin -e PGADMIN_DEFAULT_EMAIL=admin@provider.com -e PGADMIN_DEFAULT_PASSWORD=mysecretpassword -p 8080:80 -d dpage/pgadmin4:latest"
+
+# AI Agents
+alias k="~/.kimi-code/bin/kimi -y"
+alias agy="cd ~/Builds && ~/.local/bin/antigravity"
+
+# Other
+alias td="notify-send 'Command Progress' 'Command execution is done successfully' --icon=kitty --app-name='Kitty'" # send notification for command success
+alias gb="sudo du -h / | grep '^[0-9\.]*G' | sort -h" # Find GB size folders
+alias tb="nc termbin.com 9999" # termbin
+alias blacklistconf="vim /etc/modprobe.d/blacklist.conf" # kernel modules blacklist file. requires sudo
+alias vcam="modprobe v4l2loopback exclusive_caps=1 card_label='OBS Virtual Camera'"

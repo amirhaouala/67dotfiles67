@@ -1,0 +1,2 @@
+(projectile-rails :repo "Silex/projectile-rails"
+                  :fetcher github)

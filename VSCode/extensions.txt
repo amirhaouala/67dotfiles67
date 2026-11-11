@@ -1,0 +1,16 @@
+42crunch.vscode-openapi
+dbaeumer.vscode-eslint
+emmanuelbeziat.vscode-great-icons
+esbenp.prettier-vscode
+golang.go
+humao.rest-client
+huytd.tokyo-city
+mattpocock.ts-error-translator
+mhutchie.git-graph
+pomdtr.excalidraw-editor
+redhat.vscode-xml
+redhat.vscode-yaml
+redwan-hossain.auto-rename-tag-clone
+timsexperiments.vscode-tailwindcss
+usernamehw.errorlens
+vscodevim.vim

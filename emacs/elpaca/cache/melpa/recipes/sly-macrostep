@@ -1,0 +1,6 @@
+(sly-macrostep :fetcher github
+                 :repo "joaotavora/sly-macrostep"
+                 :files (:defaults
+                         "*.lisp"
+                         "*.asd"
+                         (:exclude "sly-macrostep-autoloads.el")))

@@ -1,0 +1,18 @@
+# wallust - generate palettes from the current wallpaper
+# Docs: https://explosion-mental.codeberg.page/wallust
+
+backend = "resized"
+palette = "dark16"
+check_contrast = true
+
+[templates]
+# Shell script of `hyprctl` commands applied to the running Hyprland session.
+# Used by the active Lua config (~/.config/hypr), which can't source variables.
+hypr-borders = { template = 'hypr-borders.sh', target = '~/.cache/wallust/hypr-borders.sh' }
+
+# Variable dump ($color0..15 etc.) sourced by Dotfiles/hypr/UserConfigs/UserDecorations.conf
+# (the old .conf config, kept working in case you switch back to it)
+hyprland = { template = 'hyprland.conf', target = '~/.config/hypr/wallust/wallust-hyprland.conf' }
+
+[hooks]
+# hypr-borders = 'sh "$HOME/.cache/wallust/hypr-borders.sh"'

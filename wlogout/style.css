@@ -1,0 +1,67 @@
+window {
+  background-color: rgba(30, 30, 46, 0.8);
+}
+
+button {
+  border: none;
+  border-radius: 80px;
+  box-shadow: none;
+  outline-style: none;
+  font-size: 13pt;
+  color: #cdd6f4;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  background-size: 20%;
+  animation: gradient_f 10s ease-in infinite;
+  transition:
+    all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682),
+    box-shadow 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+button:hover {
+  background-size: 40%;
+  color: #fab387;
+}
+
+#lock {
+  background-image: image(url("./icons/lock-hover.png"));
+}
+#lock:hover {
+  background-image: image(url("./icons/lock.png"));
+}
+
+#logout {
+  background-image: image(url("./icons/logout.png"));
+}
+#logout:hover {
+  background-image: image(url("./icons/logout-hover.png"));
+}
+
+#suspend {
+  background-image: image(url("./icons/sleep.png"));
+}
+#suspend:hover {
+  background-image: image(url("./icons/sleep-hover.png"));
+}
+
+#shutdown {
+  background-image: image(url("./icons/power.png"));
+}
+#shutdown:hover {
+  background-image: image(url("./icons/power-hover.png"));
+}
+
+#reboot {
+  background-image: image(url("./icons/restart.png"));
+}
+#reboot:hover {
+  background-image: image(url("./icons/restart-hover.png"));
+}
+
+#hibernate {
+  background-image: image(url("./icons/hibernate.png"));
+}
+#hibernate:hover {
+  background-image: image(url("./icons/hibernate-hover.png"));
+}
+

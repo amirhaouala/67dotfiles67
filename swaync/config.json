@@ -1,0 +1,64 @@
+{
+  "positionX": "center",
+  "layer-shell": true,
+  "cssPriority": "user",
+  "control-center-margin-top": 8,
+  "control-center-width": 400,
+  "control-center-height": 550,
+  "notification-window-width": 300,
+  "timeout": 4,
+  "timeout-low": 2,
+  "fit-to-screen": false,
+  "image-visibility": "when-available",
+  "script-fail-notify": true,
+  "scripts": {
+    "webapp-sound": {
+      "exec": "$HOME/.config/hypr/scripts/sounds.sh --notification",
+      "run-on": "receive"
+    }
+  },
+  "widgets": [
+    "buttons-grid",
+    "mpris",
+    "volume",
+    "backlight",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "volume": {
+      "label": "󰕾"
+    },
+    "backlight": {
+      "label": "󰃟"
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "󰐥",
+          "command": "killall wlogout || wlogout"
+        },
+        {
+          "label": "󰌾",
+          "command": "loginctl lock-session"
+        },
+        {
+          "label": "󰍃",
+          "command": "loginctl kill-session $XDG_SESSION_ID"
+        },
+        {
+          "label": "󰀝",
+          "command": "$HOME/.config/hypr/scripts/airplane.sh"
+        },
+        {
+          "label": "󰝟",
+          "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        },
+        {
+          "label": "󰂯",
+          "command": "blueman-manager"
+        }
+      ]
+    }
+  }
+}

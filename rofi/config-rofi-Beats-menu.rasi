@@ -1,0 +1,24 @@
+@import "~/.config/rofi/config.rasi"
+
+inputbar {
+  padding:                     10px 10px 60px 10px;
+}
+
+entry {
+  expand: false;
+  horizontal-align: 0.5;
+}
+
+window {
+  width: 28%;
+  height: inherit;
+}
+
+listview {
+  scrollbar: false;
+  lines: 4;
+}
+
+element-icon {
+  	size: 0;
+}

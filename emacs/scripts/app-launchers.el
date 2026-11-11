@@ -1,0 +1,43 @@
+;;; app-launchers.el --- Possible alternatives to dmenu/rofi
+
+;;; Code:
+
+;; Counsel is required for counsel-linux-app
+(use-package counsel
+  :ensure t)
+
+(defun dt/emacs-counsel-launcher ()
+  "Create and select a frame called emacs-counsel-launcher which consists only of a minibuffer and has specific dimensions. Runs counsel-linux-app on that frame, which is an emacs command that prompts you to select an app and open it in a dmenu like behaviour. Delete the frame after that command has exited"
+  (interactive)
+  (with-selected-frame 
+    (make-frame '((name . "emacs-run-launcher")
+                  (minibuffer . only)
+                  (fullscreen . 0)
+                  (undecorated . t)
+                  (internal-border-width . 10)
+                  (width . 80)
+                  (height . 11)))
+    (unwind-protect
+        (counsel-linux-app)
+      (delete-frame))))
+
+(use-package app-launcher
+  :ensure '(app-launcher :host github :repo "SebastienWae/app-launcher"))
+
+(defun dt/emacs-run-launcher ()
+  "Create and select a frame called emacs-run-launcher which consists only of a minibuffer and has specific dimensions. Runs app-launcher-run-app on that frame, which is an emacs command that prompts you to select an app and open it in a dmenu like behaviour. Delete the frame after that command has exited"
+  (interactive)
+  (with-selected-frame 
+    (make-frame '((name . "emacs-run-launcher")
+                  (minibuffer . only)
+                  (fullscreen . 0)
+                  (undecorated . t)
+                  (internal-border-width . 10)
+                  (width . 80)
+                  (height . 11)))
+    (unwind-protect
+        (app-launcher-run-app)
+      (delete-frame))))
+
+(provide 'app-launchers)
+;;; app-launchers.el ends here

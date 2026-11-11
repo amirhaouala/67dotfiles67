@@ -1,0 +1,1 @@
+(pushover :fetcher github :repo "emacsattic/pushover")

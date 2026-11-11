@@ -1,0 +1,26 @@
+:root {
+  --notification-icon-size: 32px;
+}
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.notification {
+  padding: 7px;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.text-box {
+  margin-left: 10px;
+}
+
+.notification-default-action:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.control-center {
+  background: rgba(0, 0, 0, 0.9);
+}

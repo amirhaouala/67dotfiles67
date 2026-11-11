@@ -1,0 +1,96 @@
+{
+    "margin-top" : 10,
+    "margin-left": 20,
+    "margin-right": 20,
+    "height" : 35,
+    "modules-left": [
+      "hyprland/window"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "pulseaudio",
+      "cpu",
+      "battery",
+      "custom/prayerbar",
+      "tray",
+      "network",
+      "clock"
+    ],
+    "hyprland/window": {
+      "format": "{}",
+      "max-length": 31,
+      "rewrite": {
+        "": "Fedora - Hyprland",
+        "(.*) - (.*)": "$2 - $1"
+      },
+      "separate-outputs": true
+    },
+    "hyprland/workspaces": {
+      "format": "<span font='10'>{icon}</span>",
+      "on-click": "activate",
+      "format-icons": {
+	      "active": " "
+      },
+      "sort-by-number": true,
+      "persistent-workspaces": {
+        "*": 1
+      }
+    },
+    "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-bluetooth": "{icon}  {volume}%",
+      "format-bluetooth-muted": "{icon}  ",
+      "format-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      }
+    },
+    "network": {
+      "format-wifi": "{icon}",
+      "format-ethernet": "󰈀",
+      "format-disconnected": "󰤭 ",
+      "tooltip-format-wifi": "{essid}  ({signalStrength}%)\n󰅛 {ipaddr}   󰇚 {bandwidthDownBytes}   󰇛 {bandwidthUpBytes}",
+      "tooltip-format-ethernet": "{ifname}\n󰅛 {ipaddr}   󰇚 {bandwidthDownBytes}   󰇛 {bandwidthUpBytes}",
+      "interval": 5,
+      "on-click": "nm-connection-editor",
+      "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"]
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "tooltip": true
+    },
+    "battery": {
+      "states": {
+        "warning": 20,
+        "critical": 10
+      },
+      "format": "{icon}  {capacity}%",
+      "format-charging": "  {capacity}%",
+      "format-plugged": "  {capacity}%",
+      "format-icons": ["", "", "", "", ""]
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+    "tray": {
+      "icon-size": 20,
+      "spacing": 10,
+      "reverse-direction": false
+    },
+    "custom/prayerbar": {
+      "format": "{}",
+      "tooltip": true,
+      "interval": 60,
+      "exec": "/home/humbleman/Code/RUST/prayerbar/target/release/prayerbar --city Tunis",
+      "return-type": "json"
+    }
+}
